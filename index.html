@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Study Questions</h2>
+
+<button class="collapsible">Q1: What are form validations?</button>
+<div class="content">
+  <p>A1: Form validations are specific constraints or rules that determine what data users can enter into an input. When a user enters data that breaks the rules, a message will appear, providing feedback on what was wrong with the entered data and how to fix it.</p>
+</div>
+
+<button class="collapsible">Q2: How can you validate the minimum and maximum of numeric inputs?</button>
+<div class="content">
+  <p>A2: You can validate the minimum and maximum of numeric inputs using the min and max attributes. These attributes allow you to set the lower and upper bounds of the value entered into the form control.</p>
+</div>
+
+<button class="collapsible">Q3: What can you use the pattern validation for?</button>
+<div class="content">
+  <p>A3: The pattern validation can be used to ensure data matches a particular pattern. Real-world applications would be checking if a credit card number or a zipcode is in the correct format.</p>
+</div>
+
+<button class="collapsible">Q4: What does the required validation do?</button>
+<div class="content">
+  <p>A4: The required validation ensures that specific fields have been filled in before submitting the form. For example, the email and password in a login form.</p>
+</div>
+
+<button class="collapsible">Q5: What validations can you use for checking text length?</button>
+<div class="content">
+  <p>A5: You can use the minlength and maxlength attributes to validate the length of text inputs. The minlength attribute sets the minimum number of characters, while the maxlength attribute sets the maximum number of characters.</p>
+</div>
+
+<button class="collapsible">Q6: What pseudo CSS selectors are available for styling valid and invalid inputs?</button>
+<div class="content">
+  <p>A6: The :valid and :invalid pseudo CSS selectors are available for styling valid and invalid inputs respectively.</p>
+</div>
+
+<button class="collapsible">Q7: What are the limitations of built-in validations?</button>
+<div class="content">
+  <p>A7: Built-in validations have limitations such as not being able to validate that a password input and password confirmation input have the same value or validating that a username has not already been taken. They also limit what can be done with styling the validation messages and the content within them.</p>
+</div>
+
+<button class="collapsible">Q8: How do you indicate which fields are required in a form?</button>
+<div class="content">
+  <p>A8: To indicate which fields are required in a form, you can add an asterisk (*) to the required field label. This is often done to ensure a good user experience and to meet accessibility guidelines.</p>
+</div>
+
+<button class="collapsible">Q9: How do you add a minimum length validation to a form control?</button>
+<div class="content">
+  <p>A9: To add a minimum length validation to a form control, you can use the minlength attribute with an integer value that represents the minimum number of characters you want to allow in the form control.</p>
+</div>
+
+<button class="collapsible">Q10: How do you add a maximum length validation to a form control?</button>
+<div class="content">
+  <p>A10: To add a maximum length validation to a form control, you can use the maxlength attribute with an integer value that represents the maximum number of characters you want to allow in the form control.</p>
+</div>
+
+<button class="collapsible">Q11: How do you control the range of values users can enter into number-based form controls?</button>
+<div class="content">
+  <p>A11: To control the range of values users can enter into number-based form controls, you can use the min and max attributes. These attributes allow you to set the lower and upper bounds of the value entered into the form control.</p>
+</div>
+
+<button class="collapsible">Q12: How do you add a pattern validation to a form control?</button>
+<div class="content">
+  <p>A12: To add a pattern validation to a form control, you can use the pattern attribute with a regular expression as the value. This ensures that the data entered by the user matches a particular pattern.</p>
+</div>
+
+<button class="collapsible">Q13: What are some real-world applications of pattern validation?</button>
+<div class="content">
+  <p>A13: Real-world applications of pattern validation include checking if a credit card number or a zipcode is in the correct format.</p>
+</div>
+
+<button class="collapsible">Q14: How can you style form controls that have passed or failed validations?</button>
+<div class="content">
+  <p>A14: You can style form controls that have passed or failed validations using the :valid and :invalid pseudo-classes in CSS.</p>
+</div>
+
+<button class="collapsible">Q15: What are some limitations of built-in validations?</button>
+<div class="content">
+  <p>A15: Some limitations of built-in validations include not being able to validate that a password input and password confirmation input have the same value, or validating that a username has not already been taken. They also limit what can be done with styling the validation messages and the content within them.</p>
+</div>
+
+<button class="collapsible">Q16: Why is it important to also have server-side validations?</button>
+<div class="content">
+  <p>A16: It's important to also have server-side validations to ensure the integrity of any user data coming into our systems. Client-side validations are not a silver bullet for ensuring users enter the correct data.</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
